@@ -3,7 +3,7 @@ import { Trash2 } from "lucide-react";
 
 interface ShoppingListItem {
   id: string;
-  name: string;
+  item_name: string;
   created_at: string;
 }
 
@@ -17,7 +17,7 @@ const ShoppingItem = ({ item, onDelete, isDeleting }: ShoppingItemProps) => {
   return (
     <div className="flex items-center justify-between p-4 bg-white rounded-lg border border-gray-200 hover:shadow-md transition-shadow">
       <div className="flex-1">
-        <p className="text-gray-800 font-medium">{item.name}</p>
+        <p className="text-gray-800 font-medium">{item.item_name}</p>
         <p className="text-gray-500 text-sm">
           Added {new Date(item.created_at).toLocaleDateString()}
         </p>

@@ -15,7 +15,7 @@ import AuthButton from "../components/AuthButton";
 
 interface ShoppingListItem {
   id: string;
-  name: string;
+  item_name: string;
   created_at: string;
 }
 
@@ -71,7 +71,7 @@ const Index = () => {
           "Content-Type": "application/json",
           Authorization: `Bearer ${token}`,
         },
-        body: JSON.stringify({ name: itemName }),
+        body: JSON.stringify({ item_name: itemName }),
       });
 
       if (!response.ok) {
